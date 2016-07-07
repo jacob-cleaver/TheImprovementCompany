@@ -1,2 +1,13 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+@media (min-width:1200px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.navbar-update {
+  background-color: rgba(black, 0.5);
+  position:fixed;
+  width: 100%;
+}

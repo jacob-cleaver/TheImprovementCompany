@@ -13,7 +13,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    <link href="/css/app.css" rel="stylesheet">
 
     <style>
         body {
@@ -26,7 +26,7 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top navbar-update">
         <div class="container">
             <div class="navbar-header">
 
@@ -40,7 +40,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <span class="glyphicon glyphicon-education"> ProjectBazaar</span>
+                    <img src="pb.png" height="42" width="42">
                 </a>
             </div>
 
@@ -70,8 +70,6 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile</a></li>
-                                <li><a href="{{ url('/addAccounts') }}"><i class="fa fa-btn fa-plus"></i>Add Accounts</a></li>
-                                <li><a href="{{ url('/removeAccounts') }}"><i class="fa fa-btn fa-minus"></i>Remove Accounts</a></li>
                                 <li><a href="{{ url('/settings') }}"><i class="fa fa-btn fa-cog"></i>Settings</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
@@ -82,6 +80,7 @@
         </div>
     </nav>
 
+    @yield('sidebar')
     @yield('content')
 
     <!-- JavaScripts -->

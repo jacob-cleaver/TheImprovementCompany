@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('sidebar')
 
 @section('content')
 <div class="container">
@@ -8,7 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    Remove accounts 
+                    Remove accounts
                 </div>
             </div>
         </div>
