@@ -2,10 +2,17 @@
   .container {
     width: 95%; } }
 
-.navbar-update {
-  background-color: rgba(0, 0, 0, 0.5);
+.navbar-default {
+  height: 120px;
   position: fixed;
+  width: 100%;
   color: white;
-  width: 100%; }
+  background-color: rgba(0, 0, 0, 0.6); }
+  .navbar-default .navbar-nav > li > a {
+    margin-top: 35px;
+    color: #ffffff; }
+
+body {
+  background: linear-gradient(rgba(255, 165, 0, 0.65), rgba(255, 165, 0, 0.65)), url("/images/background-image.jpg"); }
 
 /*# sourceMappingURL=app.css.map */
