@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
     <link href="/css/app.css" rel="stylesheet">
 
+    <script type="text/javascript" src="../../scripts/navigatingButtons.js"></script>
     <style>
         body {
             font-family: 'Lato';
@@ -26,7 +27,8 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+  <div class="wrapper">
+    <nav class="navbar navbar-fixed-top navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -40,8 +42,10 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/images/ProjectBazaar.png" alt="Project Bazaar" height="100" width="auto"/>
-
+                    <img src="/images/ProjectBazaar.png" src="/images/ProjectBazaarWriting.png" alt="Project Bazaar" height="100" width="auto"/>
+                </a>
+                <a class="navbar-brand" href="{{ url('/') }}">
+                  <img src="/images/ProjectBazaarWriting.png" alt="Project Bazaar" height="30" width="auto" margin-top="100"/>
                 </a>
             </div>
 
@@ -60,9 +64,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li style="border-left:1px solid white; margin-top:30px"><a href="{{ url('/login') }}"></a></li>
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li style="border-left:1px solid white; margin-top:30px; margin-right:20px; height:60px;">&nbsp;</li>
+                        <li><a href="{{ url('/login') }}">Sign in</a></li>
+                        <li><a href="{{ url('/register') }}">Sign up</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
@@ -85,9 +89,11 @@
     @yield('sidebar')
     @yield('content')
 
+</div>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="../../../assets/cripts/jquery.mobile.custom.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>
