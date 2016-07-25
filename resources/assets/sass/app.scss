@@ -13,9 +13,9 @@
     }
 }
 body {
-    background-image: linear-gradient(to right, rgba(245,245,245,0.75),rgba(119,136,153));
-    background-attachment: fixed;
-    background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(to right, rgba(245,245,245,0.75), rgba(119,136,153, 0.75));
+  background-size: cover;
 }
 
 .wrapper {
@@ -37,6 +37,12 @@ body {
     left: 0;
     z-index: -1;
   }
+}
+
+.dissertation-image {
+  -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
 }
 
 .custom-div {
