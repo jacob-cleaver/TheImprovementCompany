@@ -1,0 +1,155 @@
+@import 'variables';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  background: linear-gradient(
+      rgba($black, .5),
+      rgba($black, .5)
+    ),
+    url('/images/background-tools.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+p {
+  color: $white;
+  text-align: center;
+}
+
+// NAVIGATION
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  color: $white;
+  display: block;
+  height: 95px;
+  z-index: 4;
+}
+
+.navbar-nav > li > a {
+  color: $white;
+  margin-left: 10px;
+  margin-top: 23px;
+  padding: 10px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: transparent;
+  border-bottom: 1px solid $blue;
+  color: $white;
+}
+
+// BUTTONS
+.btn-blue {
+  background-color: $blue;
+  border-radius: 5px;
+  color: $white;
+
+  &:hover {
+    background-color: $dark-blue;
+    border-radius: 5px;
+    color: $white;
+  }
+}
+
+// DIVS
+.custom-div {
+  background-color: $black;
+  box-shadow: 0 0 100px 0 $black;
+  color: $white;
+  font-size: 20px;
+  height: 2000px;
+  padding: 50px;
+  text-align: center;
+  z-index: 3;
+}
+
+.transparent-div {
+  color: $white;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 800px;
+  padding: 50px;
+  text-align: center;
+}
+
+// CAROUSEL
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+// .carousel-inner > .item > img,
+// .carousel-inner > .item > a > img {
+//   height: 400px;
+// }
+
+.carousel {
+  height: 700px;
+  position: fixed;
+}
+
+.carousel-inner {
+  z-index: 2;
+}
+
+.kitchen {
+  background: linear-gradient(
+      rgba($black, .5),
+      rgba($black, .5)
+    ),
+    url('/images/kitchen.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.bathroom {
+  background: linear-gradient(
+      rgba($black, .5),
+      rgba($black, .5)
+    ),
+    url('/images/bathroom.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.extension {
+  background: linear-gradient(
+      rgba($black, .5),
+      rgba($black, .5)
+    ),
+    url('/images/extension.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.wardrobe {
+  background: linear-gradient(
+      rgba($black, .5),
+      rgba($black, .5)
+    ),
+    url('/images/wardrobe.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+// FOOTER
+.footer {
+  background-color: $black;
+  border-top-color: 1px solid $white;
+  color: $white;
+  height: 500px;
+  padding-top: 150px;
+  text-align: center;
+}
