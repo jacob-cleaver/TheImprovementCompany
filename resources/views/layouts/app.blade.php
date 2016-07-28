@@ -14,8 +14,6 @@
     <!-- Styles -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
     <link href="/css/app.css" rel="stylesheet">
-
-    <script type="text/javascript" src="../../scripts/navigatingButtons.js"></script>
     <style>
         body {
             font-family: 'Lato';
@@ -28,7 +26,7 @@
 </head>
 <body id="app-layout">
   <div class="wrapper">
-    <nav class="navbar navbar-fixed-top navbar-default navbar-static-top">
+      <nav class="navbar navbar-fixed-top navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -42,58 +40,53 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/images/ProjectBazaar.png" src="/images/ProjectBazaarWriting.png" alt="Project Bazaar" height="100" width="auto"/>
-                </a>
-                <a class="navbar-brand" href="{{ url('/') }}">
-                  <img src="/images/ProjectBazaarWriting.png" alt="Project Bazaar" height="30" width="auto" margin-top="100"/>
+                    <img src="/images/logo-house.png" alt="The Improvement Company" height="80px" width="auto"/>
                 </a>
             </div>
 
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-            @if (Auth::user())
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="{{ url('/projects') }}">Projects</a></li>
-                    <li><a href="{{ url('/myspace') }}">My Space</a></li>
+                    <li><a href="{{ url('/home') }}" class="btn-navbar" style="color:#ffffff;">HOME</a></li>
+                    <li><a href="{{ url('/kitchens') }}" class="btn-navbar" style="color:#ffffff;">KITCHENS</a></li>
+                    <li><a href="{{ url('/bathrooms') }}" class="btn-navbar" style="color:#ffffff;">BATHROOMS</a></li>
+                    <li><a href="{{ url('/extensions') }}" class="btn-navbar" style="color:#ffffff;">EXTENSIONS</a></li>
+                    <li><a href="{{ url('/joinery') }}" class="btn-navbar" style="color:#ffffff;">JOINERY</a></li>
+                    <li><a href="{{ url('/gallery') }}" class="btn-navbar" style="color:#ffffff;">GALLERY</a></li>
                 </ul>
-            @endif
-
-                <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li style="border-left:1px solid white; margin-top:30px; margin-right:20px; height:60px;">&nbsp;</li>
-                        <li><a href="{{ url('/login') }}">Sign in</a></li>
-                        <li><a href="{{ url('/register') }}">Sign up</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                              <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%;">
-                              {{ Auth::user()->first. " " . Auth::user()->last }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile</a></li>
-                                <li><a href="{{ url('/settings') }}"><i class="fa fa-btn fa-cog"></i>Settings</a></li>
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
+                    <li><a href="{{ url('/about') }}" class="btn-navbar" style="color:#ffffff;">ABOUT</a></li>
+                    <li><a href="{{ url('/contact') }}" class="btn-navbar" style="color:#ffffff;">CONTACT</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    @yield('sidebar')
     @yield('content')
 
-</div>
+  </div>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="../../../assets/cripts/jquery.mobile.custom.min.js"></script>
+    <script src="../../../assets/scripts/jquery.mobile.custom.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <script src="../node_modules/parallax.js-1.4.2/parallax.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+  <footer class="row">
+    <div class="col-sm-12" style="bottom:0; left:0;">
+      <div class="col-sm-3">
+        <img src="/images/logo.png" alt="The Improvement Company" height="80px" width="auto" style="margin-left:50px"/>
+      </div>
+      <div class="col-sm-3">
+        Hello
+      </div>
+      <div class="col-sm-3">
+        Hello
+      </div>
+      <div class="col-sm-3">
+        Hello
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

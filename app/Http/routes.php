@@ -12,33 +12,16 @@
 */
 
 Route::group(['middleware' => 'web'], function() {
-    Route::auth();
     Route::get('/', function () {
-        return view('welcome');
+        return view('home');
     });
 
-    Route::get('access', function(){
-      echo 'You have access!';
-    })->middleware('isAdmin');
-
     Route::get('/home', 'HomeController@index');
-    Route::get('/projects', 'ProjectController@index');
-    Route::get('/myspace', 'MySpaceController@index');
-    Route::get('/learnmore', 'LearnMoreController@index');
-    Route::get('/settings', 'SettingsController@index');
-    Route::get('/addAccounts', 'AddAccountController@index');
-    Route::get('/removeAccounts', 'RemoveAccountController@index');
-    Route::get('/profile', 'UserController@profile');
-    Route::post('/settings', 'UserController@update_avatar');
+    Route::get('/kitchens', 'KitchensController@index');
+    Route::get('/bathrooms', 'BathroomsController@index');
+    Route::get('/extensions', 'ExtensionsController@index');
+    Route::get('/joinery', 'JoineryController@index');
+    Route::get('/gallery', 'GalleryController@index');
+    Route::get('/about', 'AboutController@index');
+    Route::get('/contact', 'ContactController@index');
 });
-
-// Authentication routes...
-    Route::get('auth/login', 'Auth\AuthController@getLogin');
-    Route::post('auth/login', 'Auth\AuthController@postLogin');
-    Route::get('auth/logout', 'Auth\AuthController@getLogout');
-
-// Registration routes...
-    Route::get('auth/register', 'Auth\AuthController@getRegister');
-    Route::post('auth/register', 'Auth\AuthController@postRegister');
-
-    Route::auth();
